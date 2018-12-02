@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <style>
+        #a{
+            width: 200px;
+            height: 70px;
+            margin: 3px;
+            padding: 3px;
+        }
+        #b{
+            width: 200px;
+            height: 70px;
+            margin: 3px;
+            padding: 3px;
+        }
+        #c{
+            width: 200px;
+            height: 70px;
+            margin: 3px;
+            padding: 10px;
+            padding-left: 50px;
+        }
+        .but{
+            width: 30px;
+            height: 30px;
+            margin: 3px;
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2 solid black">
+        <tr>
+            <td><input type="number" id="a"></td><br>
+            <td><input type="number" id="b"></td>
+            <td>
+                <input type="button" class="but" value="+" onclick="add()"><br>
+                <input type="button" class="but" value="-" onclick="sub()"><br>
+                <input type="button" class="but" value="*" onclick="mul()"><br>
+                <input type="button" class="but" value="/" onclick="div()">
+            </td>
+            <td class="but"> = </td>
+            <td id="c"></td>
+        </tr>
+    </table>
+
+    <script>
+        function add() {
+            document.getElementById("c").innerHTML = (parseInt(document.getElementById('a').value) + parseInt(document.getElementById(
+                'b').value));
+        }
+
+        function sub() {
+            document.getElementById("c").innerHTML = (document.getElementById('a').value - document.getElementById(
+                'b').value);
+        }
+
+        function mul() {
+            document.getElementById("c").innerHTML = (document.getElementById('a').value * document.getElementById(
+                'b').value);
+        }
+
+        function div() {
+            document.getElementById("c").innerHTML = (document.getElementById('a').value / document.getElementById(
+                'b').value);
+        }
+    </script>
+</body>
+
+</html>
